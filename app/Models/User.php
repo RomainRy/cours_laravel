@@ -52,4 +52,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Playlist::class);
     }
+
+    public function apiKeys(): HasMany
+    {
+        return $this->hasMany(\App\Models\ApiKey::class);
+    }
 }
